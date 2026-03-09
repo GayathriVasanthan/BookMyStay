@@ -47,5 +47,7 @@ public class BookMyStay {
         System.out.println(single.getDetails() + " | Available: " + singleAvailable);
         System.out.println(dbl.getDetails() + " | Available: " + doubleAvailable);
         System.out.println(suite.getDetails() + " | Available: " + suiteAvailable);
+        System.out.println("Welcome to Book My Stay App");
+
     }
 }
