@@ -54,6 +54,14 @@ class BookingRequestQueue {
 
     public void addRequest(Reservation reservation) {
         queue.add(reservation);
+        System.out.println("Request added: " + reservation.getDetails());
+    }
+
+    public void displayQueue() {
+        System.out.println("Current Booking Requests:");
+        for (Reservation r : queue) {
+            System.out.println(r.getDetails());
+        }
     }
 
     public Reservation getNextRequest() {
@@ -177,6 +185,19 @@ class SuiteRoom extends Room {
 public class BookMyStay {
     public static void main(String[] args) {
         System.out.println("Welcome to Book My Stay App");
+        System.out.println("Hotel Booking System v5.1");
+
+        BookingRequestQueue requestQueue = new BookingRequestQueue();
+
+        Reservation r1 = new Reservation("Alice", "Single");
+        Reservation r2 = new Reservation("Bob", "Suite");
+        Reservation r3 = new Reservation("Charlie", "Double");
+
+        requestQueue.addRequest(r1);
+        requestQueue.addRequest(r2);
+        requestQueue.addRequest(r3);
+
+        requestQueue.displayQueue();
         System.out.println("Hotel Booking System v4.1");
 
         RoomInventory inventory = new RoomInventory();
